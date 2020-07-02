@@ -52,12 +52,13 @@ public class SummeTest {
 		Double ergebnis = summe(zahlen);
 		assertThat(ergebnis).isEqualTo(-2);
 	}
-/*
-	@Test
-	void sumVonMehrerenSehrGrossenZahlen() {
-		List<Long> zahlen = Arrays.asList((long) Math.pow(2,64)-1);
-		Double ergebnis = summe(zahlen);
-		assertThat(ergebnis).isEqualTo(Math.pow(2,64)-1);
 
-	}*/
+	@Test
+	void sumVonSehrGrossenZahlen() {
+		List<Long> zahlen = Arrays.asList(Long.MAX_VALUE, 2L);
+		Double ergebnis = summe(zahlen);
+		Double a= (double) Long.MAX_VALUE;
+		assertThat(ergebnis).isEqualTo(a+2L);
+
+	}
 }
