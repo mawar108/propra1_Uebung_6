@@ -1,12 +1,13 @@
 package arithmetik;
 
+import java.math.BigInteger;
 import java.util.List;
 
 public class Summe {
 
 
-    public static Long summe(List<Long> summanden) {
-        Long result = 0L;
+    public static Double summe(List<Long> summanden) {
+        Double result = (double) 0;
         for (int i = 0; i < summanden.size(); i++) {
             result += summanden.get(i);
         }
